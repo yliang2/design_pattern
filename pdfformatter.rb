@@ -10,7 +10,7 @@ class PdfWithPasswordFormatter < PdfFormatter
 	 @base = base 
   end
   def protect_with_password
-      puts "this is a pdf with password test”
+      puts "this is a pdf with password test"
   end
   def output
     @base.output.protect_with_password
@@ -22,7 +22,7 @@ class PdfWithWatermarkFormatter < PdfFormatter
 	 @base = base 
   end
   def add_watermark
-	 puts "this is a pdf with water mark test”
+	 puts "this is a pdf with water mark test"
    end
   def output
    @base.output.add_watermark
