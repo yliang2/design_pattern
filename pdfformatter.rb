@@ -1,14 +1,12 @@
 class PdfFormatter
-  def initialize
+  def initialize(base = nil)
+    @base = base
   end
   def output
   end
 end
 
 class PdfWithPasswordFormatter < PdfFormatter
-  def initialize(base)
-	 @base = base 
-  end
   def protect_with_password
     return "this is a pdf with password test\n"
   end
@@ -18,16 +16,17 @@ class PdfWithPasswordFormatter < PdfFormatter
 end
 
 class PdfWithWatermarkFormatter < PdfFormatter
-  def initialize(base)
-	  @base = base
-  end
   def add_watermark
 	  return "this is a pdf with water mark test\n"
-    end
+  end
   def output
     @base.output.to_s + add_watermark
   end
 end
+
+class PdfWithYellowBackgroundFormatter < PdfFormatter
+end
+
 
 # If we just want a plain PDF
 formatter = PdfFormatter.new
@@ -40,6 +39,6 @@ formatter = PdfWithWatermarkFormatter.new(PdfFormatter.new)
 puts formatter.output
 
 # Both password protection and watermark
-formatter = PdfWithWatermarkFormatter.new(PdfWithPasswordFormatter.new(PdfFormatter.new))
+formatter = PdfWithYellowBackgroundFormatter.new(PdfWithPasswordFormatter.new(PdfFormatter.new))
 
 puts formatter.output
