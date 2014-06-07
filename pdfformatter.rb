@@ -1,5 +1,6 @@
 # Decorator Pattern
 
+# Decorator
 class PdfFormatter
   def initialize(base = nil)
     @base = base
