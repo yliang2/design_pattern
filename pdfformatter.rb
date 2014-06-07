@@ -1,3 +1,5 @@
+# Decorator Pattern
+
 class PdfFormatter
   def initialize(base = nil)
     @base = base
@@ -22,9 +24,6 @@ class PdfWithWatermarkFormatter < PdfFormatter
   def output
     @base.output.to_s + add_watermark
   end
-end
-
-class PdfWithYellowBackgroundFormatter < PdfFormatter
 end
 
 
