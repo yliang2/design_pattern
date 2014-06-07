@@ -38,6 +38,6 @@ formatter = PdfWithWatermarkFormatter.new(PdfFormatter.new)
 puts formatter.output
 
 # Both password protection and watermark
-formatter = PdfWithYellowBackgroundFormatter.new(PdfWithPasswordFormatter.new(PdfFormatter.new))
+formatter = PdfWithWatermarkFormatter.new(PdfWithPasswordFormatter.new(PdfFormatter.new))
 
 puts formatter.output
