@@ -1,0 +1,3 @@
+o:AddEmployee:@employeeo:Employee:
+@nameI"
+harry:ET:@numberI"	1003;	T:@addressI"345 Sunnyside Ave;	To:DeleteEmployee:@numberI"	1003:ETo:DeleteEmployee:@numberI"	1003:ETo:FindEmployee:@numberI"	1003:ET
